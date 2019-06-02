@@ -1,4 +1,11 @@
-This text is in 'Start NeoLoad.txt' in this repository.
+Notes and slides from a presentation I gave on 6/4/2019 on our use of NeoLoad's Test as Code functionality.
+
+Slides can be found at https://github.com/habereet/NeoLoadPresentation/blob/master/NeoLoad%20Presentation.pdf.
+
+This text is in in this repository at https://github.com/habereet/NeoLoadPresentation/blob/master/Start%20NeoLoad.txt.
+
+
+Instructions:
 
 Put these files at 'C:\NeoLoadExample' to make this work without changing the path in commands.
 
