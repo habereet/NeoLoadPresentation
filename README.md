@@ -1,3 +1,5 @@
+This text is in 'Start NeoLoad.txt' in this repository.
+
 Put these files at 'C:\NeoLoadExample' to make this work without changing the path in commands.
 
 Parts of the command:
