@@ -1,0 +1,5 @@
+name: YAML Example
+variables:
+- constant:
+    name: serverName
+    value: neoload

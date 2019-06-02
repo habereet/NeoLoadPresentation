@@ -1,0 +1,5 @@
+populations:
+- name: yamlPopulation
+  user_paths:
+  - name: hitServerUserPath
+    distribution: 100%

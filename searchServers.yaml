@@ -1,0 +1,4 @@
+servers:
+- name: myServer
+  host: www.${variableExample.serverName}.com
+  scheme: http

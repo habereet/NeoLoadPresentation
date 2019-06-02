@@ -1,0 +1,7 @@
+scenarios:
+- name: yamlScenario
+  populations:
+  - name: yamlPopulation
+    constant_load:
+      users: 5
+      duration: 90s

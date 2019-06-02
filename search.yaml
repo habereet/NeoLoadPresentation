@@ -1,0 +1,41 @@
+name: YAML Example
+variables:
+- constant:
+    name: serverName
+    value: google
+sla_profiles:
+- name: exampleSLA
+  thresholds:
+  - avg-request-resp-time warn >= 5000ms
+  - perc-transaction-resp-time (p90) warn >= 7500ms
+servers:
+- name: myServer
+  host: www.${serverName}.com
+  scheme: http
+user_paths:
+- name: hitServerUserPath
+  actions:
+    steps:
+    - transaction:
+        name: hitServerTransaction
+        sla_profile: exampleSLA
+        steps:
+        - request:
+            name: hitServerRequest
+            sla_profile: exampleSLA
+            url: /
+            server: myServer
+            method: GET
+    - think_time: 250ms
+populations:
+- name: yamlPopulation
+  user_paths:
+  - name: hitServerUserPath
+    distribution: 100%
+scenarios:
+- name: yamlScenario
+  populations:
+  - name: yamlPopulation
+    constant_load:
+      users: 5
+      duration: 1m30s

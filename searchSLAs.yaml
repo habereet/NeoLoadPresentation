@@ -1,0 +1,5 @@
+sla_profiles:
+- name: exampleSLA
+  thresholds:
+  - avg-request-resp-time warn >= 5000ms
+  - perc-transaction-resp-time (p90) warn >= 7500ms

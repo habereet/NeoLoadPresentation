@@ -1,0 +1,15 @@
+user_paths:
+- name: hitServerUserPath
+  actions:
+    steps:
+    - transaction:
+        name: hitServerTransaction
+        sla_profile: exampleSLA
+        steps:
+        - request:
+            name: hitServerRequest
+            sla_profile: exampleSLA
+            url: /
+            server: myServer
+            method: GET
+    - think_time: 250ms
